@@ -17,10 +17,14 @@ class Main:
         self.game = Game()
 
     def mainloop(self):
+
+        # Creating variables for easier access
+        game = self.game
+        screen = self.screen
         
         while True:
 
-            self.game.show_bg(self.screen)
+            game.show_bg(screen)
             # looping through the events
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
