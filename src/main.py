@@ -3,6 +3,7 @@ import pygame
 import sys
 
 from const import *
+from game import Game
 
 class Main:
     def __init__(self):
@@ -12,12 +13,16 @@ class Main:
         self.screen = pygame.display.set_mode((SCR_WIDTH, SCR_HEIGHT))
         # setting the caption
         pygame.display.set_caption("CHESS")
+        # creating the game object
+        self.game = Game()
 
     def mainloop(self):
         
         while True:
+
+            self.game.show_bg(self.screen)
             # looping through the events
-            for event in pygame.events.get():
+            for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
