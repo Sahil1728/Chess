@@ -1,6 +1,6 @@
 # Screen Dimensions
-SCR_WIDTH = 1024
-SCR_HEIGHT = 1024
+SCR_WIDTH = 800
+SCR_HEIGHT = 800
 
 # Board Dimensions
 ROWS = 8
