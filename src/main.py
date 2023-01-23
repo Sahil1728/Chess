@@ -17,7 +17,14 @@ class Main:
         print("Hi! Hope this works.")
     # Method for calling all classes (AKA The GAME RUNNER)
     def mainloop(self):
-        pass
+
+        while True:
+            # Looping through all the events
+            for event in pygame.event.get():
+                # If the event is quit, then quit the game
+                if(event.type == pygame.QUIT):
+                    pygame.quit()
+                    sys.exit()
 
 
 # instance of main class
