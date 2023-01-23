@@ -23,4 +23,7 @@ class Game:
                 # if the sum of row and col is odd, then it is a white square
                 else:
                     color = (255, 255, 255)
-
+                # square = (x, y, width, height)
+                square = (col*SQ_SIZE, row*SQ_SIZE, SQ_SIZE, SQ_SIZE)
+                # drawing the square
+                pygame.draw.rect(screen, color, square)
