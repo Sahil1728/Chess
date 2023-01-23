@@ -15,6 +15,7 @@ class Main:
         # Title of the screen
         pygame.display.set_caption("Chess")
         print("Hi! Hope this works.")
+    
     # Method for calling all classes (AKA The GAME RUNNER)
     def mainloop(self):
 
@@ -22,10 +23,13 @@ class Main:
             # Looping through all the events
             for event in pygame.event.get():
                 # If the event is quit, then quit the game
-                if(event.type == pygame.QUIT):
+                if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
 
+
+            # Updating the screen with the new changes
+            pygame.display.update()
 
 # instance of main class
 main = Main()
